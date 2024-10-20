@@ -1,3 +1,4 @@
+version: '3'
 services:
   react-app:
     networks:
@@ -27,5 +28,3 @@ networks:
 volumes:
   frontend-app-volume:
   backend-app-volume:
-    
-
