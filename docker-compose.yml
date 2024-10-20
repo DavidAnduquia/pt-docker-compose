@@ -6,7 +6,7 @@ services:
     networks:
       - red-app
     build:
-      context: ./pt-optimal-frontend
+      context: https://github.com/DavidAnduquia/pt-optimal-backend.git
       dockerfile: Dockerfile
     ports:
       - "3000:3000"
@@ -18,7 +18,7 @@ services:
     networks:
       - red-app
     build:
-      context: ./PT_OPTIMAL_BACKEND
+      context: https://github.com/DavidAnduquia/pt-optimal-backend.git
       dockerfile: Dockerfile
     ports:
       - "8000:8000" 
