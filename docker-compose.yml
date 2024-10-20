@@ -1,0 +1,34 @@
+# GENERICO
+
+version: '3'
+services:
+  react-app:
+    networks:
+      - red-app
+    build:
+      context: ./pt-optimal-frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - frontend-app-volume:/app
+  backend-app:
+    networks:
+      - red-app
+    build:
+      context: ./PT_OPTIMAL_BACKEND
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000" 
+    volumes:
+      - backend-app-volume:/app
+networks:
+  red-app:
+
+volumes:
+  frontend-app-volume:
+  backend-app-volume:
+    
+
