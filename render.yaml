@@ -10,10 +10,7 @@ services:
       - key: NODE_ENV
         value: production
     plan: free # Cambia esto al plan que prefieras
-    httpPort: 3000
     healthCheckPath: /
-    networks:
-      - name: red-app
 
   - type: web
     name: backend-app
@@ -27,13 +24,4 @@ services:
         value: sqlite:///./dboptical.db
     plan: free # Cambia esto al plan que prefieras
     httpPort: 8000
-    healthCheckPath: /
-    networks:
-      - name: red-app
-
-networks:
-  - name: red-app
-
-volumes:
-  - name: frontend-app-volume
-  - name: backend-app-volume
+    healthCheckPath: / 
