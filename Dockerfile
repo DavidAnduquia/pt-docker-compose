@@ -1,2 +1,2 @@
-# Instalar git
-RUN sudo apt-get install git
+# Instala git
+RUN apk add --no-cache git
