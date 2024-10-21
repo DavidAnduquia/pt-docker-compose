@@ -5,7 +5,7 @@ services:
     repo: https://github.com/DavidAnduquia/pt-optimal-frontend.git
     branch: main # Cambia esto si usas otra rama
     buildCommand: npm install && npm run build
-    startCommand: serve -s build -l 3000
+    startCommand: serve -s build 3000
     envVars:
       - key: NODE_ENV
         value: production
