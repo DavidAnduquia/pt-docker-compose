@@ -1,2 +1,2 @@
-# Instala las dependencias del proyecto
-RUN npm install
+# Instalar git
+RUN sudo apt-get install git
