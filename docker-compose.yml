@@ -26,5 +26,3 @@ networks:
 volumes:
   frontend-app-volume:
   backend-app-volume:
-
-      
