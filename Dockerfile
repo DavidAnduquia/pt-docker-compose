@@ -1,3 +1,6 @@
+# Dockerfile vacío o básico
+FROM alpine:latest
+
 # Establece el directorio de trabajo
 WORKDIR /app
 
