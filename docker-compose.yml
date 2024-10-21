@@ -1,17 +1,17 @@
 version: '3'
 services:
-  #react-app:
-  #  networks:
-  #     - red-app
-  #  build:
-  #    context: ./pt-optimal-frontend
-  #    dockerfile: Dockerfile
-  #  ports:
-  #    - "3000:3000"
-  #  environment:
-  #    - NODE_ENV=production
-  #  volumes:
-  #    - frontend-app-volume:/app
+  react-app:
+    networks:
+       - red-app
+    build:
+      context: ./pt-optimal-frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - frontend-app-volume:/app
   backend-app:
     networks:
       - red-app
