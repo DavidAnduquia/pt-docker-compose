@@ -22,6 +22,5 @@ services:
     envVars:
       - key: DATABASE_URL
         value: sqlite:///./dboptical.db
-    plan: free # Cambia esto al plan que prefieras
-    httpPort: 8000
+    plan: free # Cambia esto al plan que prefieras 
     healthCheckPath: / 
