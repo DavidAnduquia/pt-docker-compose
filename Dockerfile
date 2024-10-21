@@ -11,4 +11,4 @@ FROM alpine:latest
 #RUN git clone https://github.com/DavidAnduquia/pt-optimal-frontend.git ./pt-optimal-backend
 #RUN git clone https://github.com/DavidAnduquia/pt-optimal-backend.git ./pt-optimal-frontend
 
-#EXPOSE 8001
+EXPOSE 8001
