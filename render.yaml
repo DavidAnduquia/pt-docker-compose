@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: react-app
+    name: pt-optimal-frontend
     env: node
     repo: https://github.com/DavidAnduquia/pt-optimal-frontend.git
     branch: main # Cambia esto si usas otra rama
@@ -10,10 +10,10 @@ services:
       - key: NODE_ENV
         value: production
     plan: free # Cambia esto al plan que prefieras
-    healthCheckPath: /
+    healthCheckPath: / 
 
   - type: web
-    name: backend-app
+    name: pt-optimal-backend
     env: python
     repo: https://github.com/DavidAnduquia/pt-optimal-backend.git
     branch: main # Cambia esto si usas otra rama
