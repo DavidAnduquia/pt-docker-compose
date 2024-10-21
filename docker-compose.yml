@@ -1,5 +1,3 @@
-# GENERICO
-
 version: '3'
 services:
   react-app:
