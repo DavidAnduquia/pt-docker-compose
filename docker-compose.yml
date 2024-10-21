@@ -20,3 +20,11 @@ services:
       - DATABASE_URL=sqlite:///./dboptical.db
     networks:
       - red-app
+networks:
+  red-app:
+
+volumes:
+  frontend-app-volume:
+  backend-app-volume:
+
+      
