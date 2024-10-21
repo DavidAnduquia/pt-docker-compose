@@ -1,0 +1,39 @@
+services:
+  - type: web
+    name: react-app
+    env: node
+    repo: https://github.com/DavidAnduquia/pt-optimal-frontend.git
+    branch: main # Cambia esto si usas otra rama
+    buildCommand: npm install && npm run build
+    startCommand: serve -s build -l 3000
+    envVars:
+      - key: NODE_ENV
+        value: production
+    plan: free # Cambia esto al plan que prefieras
+    httpPort: 3000
+    healthCheckPath: /
+    networks:
+      - name: red-app
+
+  - type: web
+    name: backend-app
+    env: python
+    repo: https://github.com/DavidAnduquia/pt-optimal-backend.git
+    branch: main # Cambia esto si usas otra rama
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port 8000
+    envVars:
+      - key: DATABASE_URL
+        value: sqlite:///./dboptical.db
+    plan: free # Cambia esto al plan que prefieras
+    httpPort: 8000
+    healthCheckPath: /
+    networks:
+      - name: red-app
+
+networks:
+  - name: red-app
+
+volumes:
+  - name: frontend-app-volume
+  - name: backend-app-volume

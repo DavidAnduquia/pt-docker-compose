@@ -2,7 +2,7 @@ services:
   react-app:
     build:
       context: https://github.com/DavidAnduquia/pt-optimal-frontend.git
-      dockerfile: ./Dockerfile
+      dockerfile: Dockerfile
     ports:
       - "3000:3000"
     environment:
@@ -13,7 +13,7 @@ services:
   backend-app:
     build:
       context: https://github.com/DavidAnduquia/pt-optimal-backend.git
-      dockerfile: ./Dockerfile
+      dockerfile: Dockerfile
     ports:
       - "8000:8000"
     environment:
