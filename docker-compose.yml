@@ -16,7 +16,7 @@ services:
     networks:
       - red-app
     build:
-      context: ./PT_OPTIMAL_BACKEND
+      context: ./pt-optimal-backend
       dockerfile: Dockerfile
     ports:
       - "8000:8000" 
